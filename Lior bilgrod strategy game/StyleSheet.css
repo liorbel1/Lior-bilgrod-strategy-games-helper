@@ -1,0 +1,64 @@
+﻿html {
+    direction: rtl;
+}
+
+header, .center, footer {
+    min-height: 80px;
+    border: 2px solid blue;
+}
+
+header {
+    background-color: white;
+    margin-bottom: 5px;
+}
+
+.header_top {
+    min-height: 20px;
+    display: flex;
+}
+
+
+
+.main_nav {
+    background-color: lightgray;
+    min-height: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+    .main_nav a {
+        text-decoration: none;
+        font-size: 24px;
+        color: darkblue;
+        margin: 10px;
+    }
+
+
+.center {
+    background-color: lime;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+main, aside {
+    min-height: 300px;
+}
+
+main {
+    background-color: darkblue;
+    flex: 4;
+    color: white;
+    padding: 5px 10px;
+}
+
+
+aside {
+    background-color: gray;
+    flex: 1;
+    padding: 5px;
+    text-align: center;
+}
+
+footer {
+    background-color: orange;
+}

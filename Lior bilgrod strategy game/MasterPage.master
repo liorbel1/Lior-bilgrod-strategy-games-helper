@@ -5,16 +5,40 @@
 <html>
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
+    <meta charset="utf-8" />
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
+    <header>
+		<section class="header_top">				
+				
+		</section>
+			
+		<nav class="main_nav">   	
+			<a href="Default.aspx">דף בית</a>
+			<a href="Page1.aspx">דף 1</a>				
+		</nav>
+	</header>
+		
+	<section class="center">
+		<aside>
+				תוכן אזור צד
+		</aside>
+			
+		<main>
+			<asp:ContentPlaceHolder id="ContentPlaceHolderMain" runat="server">
+			</asp:ContentPlaceHolder>
+		</main>
+	</section>
+			
+	<footer>
+			תוכן אזור תחתון
+	</footer>
     </form>
+	<asp:ContentPlaceHolder id="ContentPlaceHolderScript" runat="server">
+    </asp:ContentPlaceHolder>
 </body>
 </html>
