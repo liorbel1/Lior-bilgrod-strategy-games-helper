@@ -62,3 +62,8 @@ aside {
 footer {
     background-color: orange;
 }
+
+.emoji {
+    width:30px;
+    height:20px;
+}
