@@ -4,7 +4,7 @@
 
 header, .center, footer {
     min-height: 80px;
-    border: 2px solid blue;
+    border: 2px solid black;
 }
 
 header {
@@ -45,7 +45,7 @@ main, aside {
 }
 
 main {
-    background-color: darkblue;
+    background-color: lightgrey;
     flex: 4;
     color: white;
     padding: 5px 10px;
@@ -60,10 +60,18 @@ aside {
 }
 
 footer {
-    background-color: orange;
+    background-color: blue;
 }
 
 .emoji {
     width:30px;
     height:20px;
+}
+.pic {
+    width:150px;
+    height:200px;
+    float:left;
+}
+p,h1,h2,h3,h4 {
+    color:black;
 }
