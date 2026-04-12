@@ -5,7 +5,9 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMain" Runat="Server">
-    תוכן דף ראשי
+    <h1>what are strategy games</h1>
+    <p>strategy games are games that the most importent skill in them is your strategy/tactics</p>
+    <p>in this program I will tell you the diffrences between them so you can pick the one you will most likely like out of all the options</p>
     
 </asp:Content>
 

@@ -17,6 +17,21 @@ header {
     display: flex;
 }
 
+.header_date {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#DateLabel {
+    flex: 1;
+}
+
+#DayImage {
+    flex: 3;
+    max-width: 60px;
+    height: auto;
+}
 
 
 .main_nav {
@@ -68,8 +83,8 @@ footer {
     height:20px;
 }
 .pic {
-    width:350px;
-    height:350px;
+    width:200px;
+    height:200px;
     float:left;
 }
 p,h1,h2,h3,h4 {
