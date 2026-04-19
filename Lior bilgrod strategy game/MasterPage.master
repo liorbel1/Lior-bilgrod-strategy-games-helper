@@ -23,8 +23,17 @@
 		</section>
 			
 		<nav class="main_nav">   	
-			<a href="Default.aspx">home page</a>
-			<a href="GamesIdea.aspx">strategy games diffrences</a>
+			<a href="Default.aspx">home</a>
+			<a href="StrategyGenres.aspx">beyond Chess</a>
+
+			<div class="dropdown">
+        <button class="dropbtn">Games Genres ▼</button>
+        <div class="dropdown-content">
+            <a href="RTS_Games.aspx">Real-Time Strategy (RTS)</a>
+            <a href="TBS_Games.aspx">Turn-Based Strategy (TBS)</a>
+            <a href="GrandStrategy.aspx">Grand Strategy</a>
+        </div>
+    </div>
 		</nav>
 	</header>
 		
