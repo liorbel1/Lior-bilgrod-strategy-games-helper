@@ -12,7 +12,7 @@
     
     <img src="images/chess.jpg" alt="Strategy game elements" class="page-image" id="first-image" />
     
-    <p>The beauty of this genre is its massive variety. Whether you prefer to take your time and weigh every move in Turn-Based Strategy (TBS) games, or if the adrenaline of managing armies and resources in Real-Time Strategy (RTS) is what draws you in – there are endless worlds to explore here. <a href="[Your External Link Here]" target="_blank">Read more about the history and types of strategy games</a>.</p>
+    <p>The beauty of this genre is its massive variety. Whether you prefer to take your time and weigh every move in Turn-Based Strategy (TBS) games, or if the adrenaline of managing armies and resources in Real-Time Strategy (RTS) is what draws you in – there are endless worlds to explore here. <a href="https://en.wikipedia.org/wiki/Strategy_video_game" target="_blank">Read more about the history and types of strategy games</a>.</p>
     
     <p>With so many options, it's easy to get lost. That's exactly why this site was created! Our goal is to help you filter, focus, and discover the next strategy game that will keep you up all night and challenge your mind.</p>
     

@@ -161,7 +161,7 @@ p,h1,h2,h3,h4 {
 }
 
     .home-content h1 {
-        color: orange; /* צבע שמתאים לערכת הנושא של השלד שלכם */
+        color: black; /* צבע שמתאים לערכת הנושא של השלד שלכם */
         text-align: center;
         margin-bottom: 20px;
     }
@@ -172,7 +172,7 @@ p,h1,h2,h3,h4 {
     }
 
     .home-content a {
-        color: lime;
+        color: black;
         text-decoration: underline;
         font-weight: bold;
     }
