@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-    <title></title>
+    <title>Strategy games guide</title>
     <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
     <meta charset="utf-8" />
     <asp:ContentPlaceHolder id="head" runat="server">
@@ -19,7 +19,7 @@
 		</section>
 
 		<section class="header_top">				
-				
+				<h1>Strategy games guide</h1>
 		</section>
 			
 		<nav class="main_nav">   	
@@ -34,6 +34,7 @@
             <a href="GrandStrategy.aspx">Grand Strategy</a>
         </div>
     </div>
+			<a class="login_logout" ID="LoginLogout" runat="server"></a>
 		</nav>
 	</header>
 		

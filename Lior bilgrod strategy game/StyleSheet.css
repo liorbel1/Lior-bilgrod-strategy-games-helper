@@ -42,6 +42,11 @@ header {
     display: flex; /* מסדר את הכפתורים בשורה */
     align-items: center; /* ממורכז אנכית */
 }
+    .main_nav .login_logout {
+        margin-right: auto;
+        border: 1px solid black;
+        padding: 5px;
+    }
 
     .main_nav a {
         text-decoration: none;
@@ -201,7 +206,7 @@ p,h1,h2,h3,h4 {
 }
 
     .content-page h1 {
-        color: orange;
+        color: black;
         text-align: center;
         border-bottom: 2px solid white;
         padding-bottom: 10px;
@@ -209,7 +214,7 @@ p,h1,h2,h3,h4 {
     }
 
     .content-page h3 {
-        color: lime;
+        color: black;
         margin-top: 25px;
         margin-bottom: 10px;
     }
