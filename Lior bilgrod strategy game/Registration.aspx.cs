@@ -116,44 +116,112 @@ public partial class Registration : System.Web.UI.Page
 
     private bool ID_Validation()
     {
-        // === משימה לתלמיד: וידוא תעודת זהות ===
-        // 1. ודא שאורך תעודת הזהות הוא בדיוק 9 תווים
-        // 2. ודא שכל התווים במחרוזת הם ספרות בלבד
-        // כדי לעבור על כל התווים, תוכל להיעזר בלולאה שמופיעה בפעולה:
-        // Password_Validation
-        // 3. אם יש שגיאה, אל תשכח להוסיף הודעה אל:
-        // RegistrationResult.InnerText
-        // ולהחזיר:
-        // return false;
+
+        string Id = idNum.Value;
+      
+
+        if (Id.Length != 9)
+        {
+            RegistrationResult.InnerText += "ID must contain 9 numbers. ";
+            return false;
+        }
+
+       
+        bool letterExist = false;
+        bool numberExist = false;
+        for (int i = 0; i < Id.Length; i++)
+        {
+            if (Id[i] >= '0' && Id[i] <= '9')
+            {
+                numberExist = true;
+            }
+            if (Id[i] >= '0' && Id[i] <= '9')
+                letterExist = true;
+        }
+        if (letterExist)
+        {
+            RegistrationResult.InnerText += "ID must not contain letters. ";
+            return false;
+        }
+        if (!numberExist)
+        {
+            RegistrationResult.InnerText += "ID must be numbers. ";
+            return false;
+        }
 
         return true;
+        
     }
 
     private bool Phone_Validation()
     {
-        // === משימה לתלמיד: וידוא מספר טלפון ===
-        // 1. ודא שאורך מספר הטלפון הוא בדיוק 10 תווים
-        // 2. ודא שהתו הראשון במספר הוא הספרה אפס
-        // 3. ודא שכל התווים במחרוזת הם ספרות בלבד
-        // 4. במקרה שאחד מהתנאים לא מתקיים, עדכן את:
-        // RegistrationResult.InnerText
-        // וסיים את הפעולה עם:
-        // return false;
+        
+
+
+        string phonenum = phone.Value;
+
+        if (phonenum.Length != 10)
+        {
+            RegistrationResult.InnerText += "phone numbers must contain 10 numbers. ";
+            return false;
+        }
+       
+        if(phonenum[0] != '0')
+        {
+            RegistrationResult.InnerText += "phone number first number must be 0. ";
+            return false;
+        }
+        bool numberExist = false;
+        for (int i = 0; i < phonenum.Length; i++)
+        {
+            if (phonenum[i] >= '0' && phonenum[i] <= '9')
+            {
+                numberExist = true;
+            }
+        }
+
+        if (!numberExist)
+        {
+            RegistrationResult.InnerText += "phone number must be numbers. ";
+            return false;
+        }
 
         return true;
     }
 
     private bool Email_Validation()
     {
-        // === משימה לתלמיד: וידוא כתובת אימייל בסיסית ===
-        // ודא שהתנאים הבאים מתקיימים:
-        // 1. המחרוזת מכילה את התו שטרודל
-        // 2. המחרוזת מכילה את התו נקודה
-        // 3. הנקודה מופיעה אחרי השטרודל
-        // רמז: כדי למצוא את המיקום של התווים, חפש ברשת איך להשתמש בפעולה:
-        // IndexOf
-        // במקרה שאחד התנאים לא מתקיים, הוסף הודעת שגיאה מתאימה והחזר:
-        // return false;
+        
+
+        string email = mail.Value;
+
+        bool shtrodelexist = false;
+        bool pointexist = false;
+        int countdot = 0;
+        int countshtrodel = 0;
+        for(int i = 0; i < email.Length; i++)
+        {
+            if (email[i] == '@')
+            {
+                shtrodelexist = true;
+                countshtrodel = i;
+            }
+            else if (email[i] == '.')
+            {
+                pointexist = true;
+                countdot = i;
+            }
+        }
+        if (!shtrodelexist || !pointexist)
+        {
+            RegistrationResult.InnerText += "email must contain shtrodel and a dot. ";
+            return false;
+        }
+        if (countdot < countshtrodel)
+        {
+            RegistrationResult.InnerText += "shtrodel must be placed before the dot ";
+            return false;
+        }
 
         return true;
     }
