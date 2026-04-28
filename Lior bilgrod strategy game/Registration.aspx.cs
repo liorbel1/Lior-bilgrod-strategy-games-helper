@@ -79,22 +79,21 @@ public partial class Registration : System.Web.UI.Page
         string password = pswd.Value;
         string pswdV = pswdValidate.Value;
 
-        // קוד שמוודא שהסיסמה בין 6 ל-10 תווים בלבד
         if (password.Length < 6 || password.Length > 10)
         {
             RegistrationResult.InnerText += "password must contain 6-10 letters. ";
             return false;
         }
 
-        // קוד שמוודא שהסיסמה מכילה אותיות ומספרים
+        
         bool letterExist = false;
         bool numberExist = false;
         for (int i = 0; i < password.Length; i++)
         {
-            // בדיקת קיום אותיות
+           
             if (password[i] >= 'a' && password[i] <= 'z' || password[i] >= 'A' && password[i] <= 'Z')
                 letterExist = true;
-            // בדיקת קיום מספרים
+            
             else if (password[i] >= '0' && password[i] <= '9')
                 numberExist = true;
         }
@@ -104,10 +103,10 @@ public partial class Registration : System.Web.UI.Page
             return false;
         }
 
-        // קוד לוידוא סיסמה ווידוא סיסמה זהים
+        
         if (password != pswdV)
         {
-            RegistrationResult.InnerText += "הסיסמה ווידוא הסיסמה אינם זהים. ";
+            RegistrationResult.InnerText += "The password and password confirmation are not the same. ";
             return false;
         }
 
@@ -126,8 +125,6 @@ public partial class Registration : System.Web.UI.Page
             return false;
         }
 
-       
-        bool letterExist = false;
         bool numberExist = false;
         for (int i = 0; i < Id.Length; i++)
         {
@@ -135,13 +132,11 @@ public partial class Registration : System.Web.UI.Page
             {
                 numberExist = true;
             }
-            if (Id[i] >= '0' && Id[i] <= '9')
-                letterExist = true;
-        }
-        if (letterExist)
-        {
-            RegistrationResult.InnerText += "ID must not contain letters. ";
-            return false;
+            if (!(Id[i] >= '0' && Id[i] <= '9'))
+            {
+                RegistrationResult.InnerText += "ID must be ONLY numbers. ";
+                return false;
+            }
         }
         if (!numberExist)
         {
@@ -155,9 +150,6 @@ public partial class Registration : System.Web.UI.Page
 
     private bool Phone_Validation()
     {
-        
-
-
         string phonenum = phone.Value;
 
         if (phonenum.Length != 10)
@@ -171,21 +163,16 @@ public partial class Registration : System.Web.UI.Page
             RegistrationResult.InnerText += "phone number first number must be 0. ";
             return false;
         }
-        bool numberExist = false;
+     
         for (int i = 0; i < phonenum.Length; i++)
         {
-            if (phonenum[i] >= '0' && phonenum[i] <= '9')
+           
+            if (!(phonenum[i] >= '0' && phonenum[i] <= '9'))
             {
-                numberExist = true;
+                RegistrationResult.InnerText += "phone number must be ONLY numbers. ";
+                return false;
             }
         }
-
-        if (!numberExist)
-        {
-            RegistrationResult.InnerText += "phone number must be numbers. ";
-            return false;
-        }
-
         return true;
     }
 
@@ -230,7 +217,7 @@ public partial class Registration : System.Web.UI.Page
     {
         if (!approval.Checked)
         {
-            RegistrationResult.InnerText += "יש לאשר את תקנון האתר. ";
+            RegistrationResult.InnerText += "The site regulations must be approved. ";
             return false;
         }
 
