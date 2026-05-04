@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -224,11 +225,35 @@ public partial class Registration : System.Web.UI.Page
         return true;
     }
 
-    private bool Insert_Into_Database()
+   
+        private bool Insert_Into_Database()
     {
+        string dbPath = this.MapPath("App_Data/Database.mdf");
+        DAL dal = new DAL(dbPath);
+
+        string sqlQuery = "SELECT * FROM Users WHERE user_name = '" + userName.Value + "'";
+        DataTable dt = dal.GetDataTable(sqlQuery);
+
+        if (dt.Rows.Count > 0)
+        {
+            RegistrationResult.InnerText = "שם משתמש קיים במערכת. אנא בחר.י שם אחר.";
+            return false;
+        }
+
+        sqlQuery = "INSERT INTO Users VALUES (" +
+        "'" + firstName.Value + "', " +
+        "'" + lastName.Value + "', " +
+        "'" + userName.Value + "', " +
+        "'" + pswd.Value + "', " +
+        "'" + idNum.Value + "'," +
+        "'" + phone.Value + "'," +
+        "'" + mail.Value + "'," +
+        "'" + Request.Form["gender"] + "'," +
+        "'" + DateTime.Now.ToString("yyyy-MM-dd") + "', 0);";
+
+        dal.UpdateDB(sqlQuery);
+
         return true;
     }
-
-
 
 }
