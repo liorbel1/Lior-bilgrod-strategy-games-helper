@@ -31,7 +31,7 @@
         <div class="dropdown-content">
             <a href="RTS_Games.aspx">Real-Time Strategy (RTS)</a>
             <a href="TBS_Games.aspx">Turn-Based Strategy (TBS)</a>
-            <a href="GrandStrategy.aspx">Grand Strategy</a>
+            <a href="GrandStrategy.aspx" id="no" runat="server">Grand Strategy</a>
         </div>
     </div>
 			<a class="login_logout" ID="LoginLogout" runat="server"></a>
