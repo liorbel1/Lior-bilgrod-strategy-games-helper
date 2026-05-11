@@ -232,3 +232,11 @@ p,h1,h2,h3,h4 {
         color: white;
         font-weight: bold;
     }
+
+.adminTable tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+.adminTable, .adminTable th, .adminTable td {
+    border: 1px solid black;
+}
