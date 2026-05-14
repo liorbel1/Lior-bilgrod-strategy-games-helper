@@ -15,4 +15,5 @@ public partial class GrandStrategy : System.Web.UI.Page
         }
 
     }
+
 }

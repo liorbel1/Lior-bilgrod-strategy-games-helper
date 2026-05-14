@@ -10,60 +10,58 @@ public partial class Login : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        // אם המשתמש כבר מחובר, אין טעם שיהיה בדף התחברות
+        if (Session["isLoggedIn"] != null && (bool)Session["isLoggedIn"])
+        {
+            Response.Redirect("Default.aspx");
+        }
+
         if (IsPostBack)
         {
-            string userName = Request.Form["userName"];
-            string password = Request.Form["password"];
+            string uName = Request.Form["userName"];
+            string pswd = Request.Form["password"];
 
-            int userType = GetUserTypeFromDB(userName, password);
+            int userType = GetUserTypeFromDB(uName, pswd);
 
             if (userType > 0)
             {
-                Session["userName"] = userName;
+                Session["userName"] = uName; // וודא שזה userName עם N גדולה!
                 Session["isLoggedIn"] = true;
 
                 if (userType == 2)
                     Session["isAdmin"] = true;
+                else
+                    Session["isAdmin"] = false;
 
                 Response.Redirect("Default.aspx");
             }
             else
             {
-                LoginResult.InnerText = "Password or username incorrect";
+                LoginResult.InnerText = "Username or password incorrect.";
             }
         }
     }
 
-
-
-    //returns:
-    //0 - if user is not valid
-    //1 - is user is valid
-    //2 - if user is admin
-    private int GetUserTypeFromDB(string userName, string password)
+    private int GetUserTypeFromDB(string uName, string pswd)
     {
         string dbPath = this.MapPath("App_Data/Database.mdf");
         DAL dal = new DAL(dbPath);
 
-        string sqlQuery = "SELECT * FROM Users " +
-                            "WHERE user_name = '" + userName +
-                            "' AND pswd = '" + password + "'";
-
+        // שימוש בשמות העמודות כפי שהם מופיעים בטבלה (user_name ו-pswd)
+        string sqlQuery = "SELECT * FROM Users WHERE user_name = '" + uName + "' AND pswd = '" + pswd + "'";
         DataTable dt = dal.GetDataTable(sqlQuery);
 
-        if (dt.Rows.Count == 1)
+        if (dt != null && dt.Rows.Count == 1)
         {
             DataRow row = dt.Rows[0];
 
-            if ((bool)row["is_admin"])
-                return 2;
+            // בדיקה בטוחה של is_admin
+            if (row["is_admin"] != DBNull.Value && Convert.ToBoolean(row["is_admin"]))
+                return 2; // אדמין
 
-            return 1;
+            return 1; // משתמש רגיל
         }
-        else
-        {
-            return 0;
-        }
+
+        return 0; // לא נמצא
     }
-
 }

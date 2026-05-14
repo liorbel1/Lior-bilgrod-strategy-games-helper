@@ -338,3 +338,78 @@ p,h1,h2,h3,h4 {
 .adminTable, .adminTable th, .adminTable td {
     border: 1px solid black;
 }
+
+.comments-section {
+    background-color: #d4c39c; /* צבע קלף כהה יותר מהרקע הראשי */
+    border: 2px solid #8b6508;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 30px;
+    color: #2b1d0f;
+}
+
+    .comments-section h3 {
+        color: #5c0000;
+        margin-top: 0;
+    }
+
+.comment-box {
+    width: 100%;
+    max-width: 100%;
+    background-color: #fdf5e6;
+    border: 2px solid #b8860b;
+    border-radius: 4px;
+    padding: 10px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 16px;
+    color: #2b1d0f;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.btn-medieval {
+    background-color: #5c0000;
+    color: #ffd700;
+    border: 2px solid #b8860b;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+    .btn-medieval:hover {
+        background-color: #8b0000;
+        color: #ffffff;
+    }
+
+.guest-msg {
+    font-size: 16px;
+    color: #5c0000;
+}
+
+    .guest-msg a {
+        color: #00008b;
+        font-weight: bold;
+    }
+
+.comments-list {
+    margin-top: 20px;
+}
+
+.single-comment {
+    background-color: #fdf5e6;
+    border-left: 4px solid #5c0000;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+    .single-comment strong {
+        color: #8b4513;
+        font-size: 18px;
+    }
+
+    .single-comment p {
+        margin: 5px 0 0 0;
+    }

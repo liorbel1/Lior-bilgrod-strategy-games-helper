@@ -3,26 +3,24 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 
-
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMain" Runat="Server">
-    <form runat="server" method="post" action="Login.aspx">
-       <label for="userName">שם משתמש:</label><br>
-       <input type="text" id="userName" name="userName"><br>
-       <label for="password">סיסמה:</label><br>
-       <input type="password" id="password" name="password">
-       <input type="submit" value="Submit">
-    </form>
+    <h3>Login to the Council</h3>
+    
+    <label for="userName">שם משתמש:</label><br>
+    <input type="text" id="userName" name="userName"><br>
+    
+    <label for="password">סיסמה:</label><br>
+    <input type="password" id="password" name="password"><br>
+    
+    <input type="submit" value="Submit">
+    
     <div runat="server" id="LoginResult"></div>
 
     <br><br>
-<form method="get" action="Registration.aspx">		
-    <input type="submit" value="להרשמה"/>
-</form>
-
-
+    <hr />
+    <p>New Commander? Join the ranks: </p>
+    <asp:Button ID="btnGoToReg" runat="server" Text="להרשמה" PostBackUrl="Registration.aspx" />
 </asp:Content>
-
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderScript" Runat="Server">
 </asp:Content>
-

@@ -1,73 +1,112 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
 
 <!DOCTYPE html>
-
 <html>
 <head runat="server">
     <title>Strategy games guide</title>
     <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
     <meta charset="utf-8" />
-    <asp:ContentPlaceHolder id="head" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <header>
+    <form id="form1" runat="server">
+        
+        <header>
+            <section class="header_date">
+                <asp:Label ID="DateLabel" runat="server"></asp:Label>
+                <asp:Image ID="DayImage" runat="server" />
+            </section>
 
-		<section class="header_date">
-			<asp:Label ID="DateLabel" runat="server"></asp:Label>
-			<asp:Image ID="DayImage" runat="server"/>
-		</section>
+            <section class="header_top">
+                <h1>Strategy games guide</h1>
+            </section>
 
-		<section class="header_top">				
-				<h1>Strategy games guide</h1>
-		</section>
-			
-		<nav class="main_nav">   	
-			<a href="Default.aspx">home</a>
-			<a href="StrategyGenres.aspx">beyond Chess</a>
+            <nav class="main_nav">
+                <a href="Default.aspx">home</a>
+                <a href="StrategyGenres.aspx">beyond Chess</a>
 
-			<div class="dropdown">
-        <button class="dropbtn">Games Genres ▼</button>
-        <div class="dropdown-content">
-            <a href="RTS_Games.aspx">Real-Time Strategy (RTS)</a>
-            <a href="TBS_Games.aspx">Turn-Based Strategy (TBS)</a>
-			<a href="MOBA_Games.aspx">Multiplayer Online Battle Arena (MOBA)</a>
-            <a href="GrandStrategy.aspx" id="no" runat="server">Grand Strategy</a>
-        </div>
-    </div>
-			<a class="login_logout" ID="LoginLogout" runat="server"></a>
-		</nav>
-	</header>
-		
-	<section class="center">
-		<aside>
-				<h3>📜 Chronicles of War (Did You Know?)</h3>
-<hr style="border-color: #b8860b;" />
+                <div class="dropdown">
+                    <button type="button" class="dropbtn">Games Genres ▼</button>
+                    <div class="dropdown-content">
+                        <a href="RTS_Games.aspx">Real-Time Strategy (RTS)</a>
+                        <a href="TBS_Games.aspx">Turn-Based Strategy (TBS)</a>
+                        <a href="MOBA_Games.aspx">Multiplayer Online Battle Arena (MOBA)</a>
+                        <a href="GrandStrategy.aspx" id="no" runat="server">Grand Strategy</a>
+                    </div>
+                </div>
+                <a class="login_logout" id="LoginLogout" runat="server"></a>
+            </nav>
+        </header>
 
-<p style="font-size: 16px; margin-bottom: 10px;">
-    <strong>#1:</strong> The longest recorded game of <em>Civilization II</em> lasted for exactly 10 real-world years! The player was stuck in a massive global stalemate in the year 3991 A.D.
-</p>
+        <section class="center">
+            <aside>
+                <h3>📜 Chronicles of War (Did You Know?)</h3>
+                <hr style="border-color: #b8860b;" />
+                <p style="font-size: 16px; margin-bottom: 10px;">
+                    <strong>#1:</strong> The longest recorded game of <em>Civilization II</em> lasted for exactly 10 real-world years! The player was stuck in a massive global stalemate in the year 3991 A.D.
+                </p>
+                <p style="font-size: 16px; margin-bottom: 10px;">
+                    <strong>#2:</strong> South Korea has a government-recognized esports association (KeSPA), which was largely founded in the year 2000 due to the massive national popularity of <em>StarCraft</em>.
+                </p>
+                <p style="font-size: 16px; margin-bottom: 10px;">
+                    <strong>#3:</strong> The game of Chess originated in India around the 8th century and was originally called <em>Chaturanga</em>, which translates to "four divisions of the military" (infantry, cavalry, elephants, and chariotry).
+                </p>
+                <p style="font-size: 16px; margin-bottom: 10px;">
+                    <strong>#4:</strong> The iconic "Wololo" sound made by the Priest unit in <em>Age of Empires</em> has become one of the most famous internet memes. It was originally recorded to sound like a magical, hypnotic chant to convert enemy units.
+                </p>
+                <p style="font-size: 16px; margin-bottom: 10px;">
+                    <strong>#5:</strong> <em>StarCraft</em> literally went to space! In 1999, American astronaut Daniel T. Barry brought a copy of the game with him aboard the Space Shuttle Discovery.
+                </p>
+                <p style="font-size: 16px; margin-bottom: 10px;">
+                    <strong>#6:</strong> The tactic of overwhelming your opponent with cheap, fast units early in the game is known globally as a "Zerg Rush" (named after the alien race in StarCraft). It's so famous that typing "Zerg Rush" into Google triggers a hidden mini-game!
+                </p>
+                <p style="font-size: 16px; margin-bottom: 10px;">
+                    <strong>#7:</strong> The most expensive virtual battle in gaming history took place in the grand strategy MMO <em>EVE Online</em>. The "Bloodbath of B-R5RB" involved thousands of players and destroyed virtual ships worth approximately $300,000 in real-world money!
+                </p>
+            </aside>
 
-<p style="font-size: 16px; margin-bottom: 10px;">
-    <strong>#2:</strong> South Korea has a government-recognized esports association (KeSPA), which was largely founded in the year 2000 due to the massive national popularity of <em>StarCraft</em>.
-</p>
+            <main>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
+                </asp:ContentPlaceHolder>
+            </main>
+        </section>
 
-<p style="font-size: 16px; margin-bottom: 10px;">
-    <strong>#3:</strong> The game of Chess originated in India around the 8th century and was originally called <em>Chaturanga</em>, which translates to "four divisions of the military" (infantry, cavalry, elephants, and chariotry).
-</p>
-		</aside>
-			
-		<main>
-			<asp:ContentPlaceHolder id="ContentPlaceHolderMain" runat="server">
-			</asp:ContentPlaceHolder>
-		</main>
-	</section>
-			
-	<footer>
-			תוכן אזור תחתון
-	</footer>
+        <footer>
+            <div class="comments-section" dir="ltr">
+                <h3>🛡️ The War Council (Commander Comments)</h3>
+                <hr style="border-color: #b8860b;" />
 
-	<asp:ContentPlaceHolder id="ContentPlaceHolderScript" runat="server">
+                <asp:Panel ID="PanelAddComment" runat="server" Visible="false">
+                    <asp:TextBox ID="txtComment" runat="server" TextMode="MultiLine" Rows="4" CssClass="comment-box" Placeholder="Share your battle tactics here..."></asp:TextBox>
+                    <br />
+                    <asp:Button ID="btnSubmitComment" runat="server" Text="Post Missive" CssClass="btn-medieval" OnClick="btnSubmitComment_Click" />
+                </asp:Panel>
+
+                <asp:Panel ID="PanelGuestMessage" runat="server" Visible="true">
+                    <p class="guest-msg"><em>You must be a registered commander to join the council. <a href="Login.aspx">Log in here</a> to leave a comment.</em></p>
+                </asp:Panel>
+
+                <div class="comments-list">
+                    <asp:Repeater ID="RepeaterComments" runat="server">
+                        <ItemTemplate>
+                            <div class="single-comment">
+                                <strong><%# Eval("Username") %>:</strong> 
+                                <span style="font-size: 12px; color: #8b6508;">(<%# Eval("CommentDate", "{0:dd/MM/yyyy HH:mm}") %>)</span>
+                                <p><%# Eval("CommentText") %></p>
+                            </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
+
+                    <div class="single-comment">
+                        <strong>Sir Lancelot:</strong>
+                        <p>Does anyone want to play a 1v1 match in Age of Empires II tonight?</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </form> <asp:ContentPlaceHolder ID="ContentPlaceHolderScript" runat="server">
     </asp:ContentPlaceHolder>
 </body>
 </html>

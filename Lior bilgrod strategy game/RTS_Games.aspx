@@ -15,8 +15,8 @@
     <p>If you love multitasking, quick decision-making under pressure, and the thrill of out-managing your opponent in real-time, RTS is your home. It requires high actions-per-minute (APM) and rewards players who can keep an eye on the big picture while micromanaging individual battles.</p>
     
     <h3>Must-Play Masterpieces</h3>
-    
-    <h4>1. StarCraft II</h4>
+      
+    <h4>1. StarCraft II</h4>  
     <p>Set in a distant sci-fi future, <em>StarCraft II</em> is the undisputed king of modern esports RTS. You choose between three completely unique factions (Terran, Zerg, or Protoss) and battle for galactic dominance. It's incredibly fast, competitive, and has a thrilling cinematic story campaign.</p>
     
     <img src="images/starcraft battle.jpg" alt="StarCraft II base and battle" class="page-image" />
