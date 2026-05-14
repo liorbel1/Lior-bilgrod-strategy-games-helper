@@ -31,6 +31,7 @@
         <div class="dropdown-content">
             <a href="RTS_Games.aspx">Real-Time Strategy (RTS)</a>
             <a href="TBS_Games.aspx">Turn-Based Strategy (TBS)</a>
+			<a href="MOBA_Games.aspx">Multiplayer Online Battle Arena (MOBA)</a>
             <a href="GrandStrategy.aspx" id="no" runat="server">Grand Strategy</a>
         </div>
     </div>
@@ -40,7 +41,20 @@
 		
 	<section class="center">
 		<aside>
-				תוכן אזור צד
+				<h3>📜 Chronicles of War (Did You Know?)</h3>
+<hr style="border-color: #b8860b;" />
+
+<p style="font-size: 16px; margin-bottom: 10px;">
+    <strong>#1:</strong> The longest recorded game of <em>Civilization II</em> lasted for exactly 10 real-world years! The player was stuck in a massive global stalemate in the year 3991 A.D.
+</p>
+
+<p style="font-size: 16px; margin-bottom: 10px;">
+    <strong>#2:</strong> South Korea has a government-recognized esports association (KeSPA), which was largely founded in the year 2000 due to the massive national popularity of <em>StarCraft</em>.
+</p>
+
+<p style="font-size: 16px; margin-bottom: 10px;">
+    <strong>#3:</strong> The game of Chess originated in India around the 8th century and was originally called <em>Chaturanga</em>, which translates to "four divisions of the military" (infantry, cavalry, elephants, and chariotry).
+</p>
 		</aside>
 			
 		<main>

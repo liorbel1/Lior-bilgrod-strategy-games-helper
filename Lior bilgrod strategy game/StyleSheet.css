@@ -1,15 +1,19 @@
 ﻿html {
     direction: rtl;
+    background-color: #1a1a1a; /* צבע אבן כהה לרקע מחוץ לאתר */
 }
 
+/* מסגרות בסגנון עתיק - כפולות בצבע זהב/ברונזה */
 header, .center, footer {
     min-height: 80px;
-    border: 2px solid black;
+    border: 4px double #b8860b; /* Dark Goldenrod */
+    border-radius: 5px; /* קצוות מעט מעוגלים */
 }
 
 header {
-    background-color: white;
+    background-color: #2c1e16; /* חום עץ כהה */
     margin-bottom: 5px;
+    color: #f4eacc; /* צבע קלף לכיתוב בהדר */
 }
 
 .header_top {
@@ -21,6 +25,8 @@ header {
     flex: 1;
     display: flex;
     flex-direction: column;
+    color: #f4eacc;
+    padding: 5px;
 }
 
 #DateLabel {
@@ -33,30 +39,35 @@ header {
     height: auto;
 }
 
-
+/* --- תפריט הניווט (דגלי הטירה) --- */
 .main_nav {
-    background-color: lightgray;
-    min-height: 50px; /* הגדלתי מעט כדי שיהיה נוח */
+    background-color: #5c0000; /* אדום בורדו עמוק */
+    min-height: 50px;
     padding-left: 50px;
     padding-right: 50px;
-    display: flex; /* מסדר את הכפתורים בשורה */
-    align-items: center; /* ממורכז אנכית */
+    display: flex;
+    align-items: center;
+    border-top: 2px solid #b8860b;
 }
+
     .main_nav .login_logout {
         margin-right: auto;
-        border: 1px solid black;
+        border: 1px solid #b8860b;
         padding: 5px;
+        color: #ffd700;
     }
 
     .main_nav a {
         text-decoration: none;
         font-size: 24px;
-        color: darkblue;
+        color: #ffd700; /* זהב */
         margin: 10px 20px;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px black; /* צל קטן לטקסט שייראה בולט */
     }
 
         .main_nav a:hover {
-            color: orange;
+            color: #ffffff; /* הופך ללבן במעבר עכבר */
         }
 
 /* --- עיצוב התפריט הנפתח (Dropdown) --- */
@@ -65,85 +76,92 @@ header {
     display: inline-block;
 }
 
-    /* הכפתור הראשי שכתוב עליו Games */
     .dropdown .dropbtn {
         font-size: 24px;
         border: none;
         outline: none;
-        color: darkblue;
+        color: #ffd700;
         background-color: transparent;
         font-family: inherit;
         margin: 10px 20px;
         cursor: pointer;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px black;
     }
 
-/* התוכן של התפריט (מוסתר כברירת מחדל) */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 280px; /* רוחב התיבה שנפתחת */
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 10; /* מוודא שהתפריט יופיע מעל התוכן של הדף */
+    background-color: #2c1e16; /* עץ כהה לתפריט הנפתח */
+    min-width: 280px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    z-index: 10;
+    border: 2px solid #b8860b;
     border-radius: 5px;
     overflow: hidden;
 }
 
-    /* הקישורים בתוך התפריט הנפתח */
     .dropdown-content a {
-        color: darkblue;
+        color: #f4eacc; /* צבע קלף */
         padding: 12px 16px;
         text-decoration: none;
-        display: block; /* מסדר אותם אחד מתחת לשני */
-        font-size: 18px; /* קטן יותר מהתפריט הראשי */
+        display: block;
+        font-size: 18px;
         margin: 0;
-        border-bottom: 1px solid #ddd; /* קו הפרדה עדין */
+        border-bottom: 1px solid #5c0000;
+        text-shadow: none;
     }
 
-        /* צבע הקישור בתפריט במעבר עכבר */
         .dropdown-content a:hover {
-            background-color: lightgray;
-            color: darkblue;
+            background-color: #5c0000;
+            color: #ffd700;
         }
 
-/* פקודת הקסם: הצג את התפריט כשעוברים עם העכבר */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* שינוי צבע הכפתור הראשי כשהתפריט פתוח */
 .dropdown:hover .dropbtn {
-    color: orange;
+    color: #ffffff;
 }
 
-
+/* --- אזור התוכן המרכזי --- */
 .center {
-    background-color: lime;
+    background-color: transparent;
     margin-bottom: 5px;
     display: flex;
+    gap: 5px; /* מרווח קטן בין ה-main ל-aside */
 }
 
 main, aside {
     min-height: 300px;
+    border-radius: 5px;
+    border: 2px solid #8b6508;
 }
 
 main {
-    background-color: lightgrey;
+    background-color: #fdf5e6; /* Old Lace - צבע של קלף/מגילה עתיקה */
     flex: 4;
-    color: white;
-    padding: 5px 10px;
+    color: #2b1d0f; /* טקסט חום כהה כדי שיהיה קריא על הקלף */
+    padding: 15px 20px;
+    box-shadow: inset 0 0 20px rgba(139, 69, 19, 0.2); /* הצללה פנימית למראה מיושן */
 }
 
-
 aside {
-    background-color: gray;
+    background-color: #d4c39c; /* צבע קלף טיפה יותר כהה לאזור הצד */
     flex: 1;
-    padding: 5px;
+    padding: 15px;
     text-align: center;
+    color: #2b1d0f;
+    font-weight: bold;
 }
 
 footer {
-    background-color: blue;
+    background-color: #2c1e16; /* חום עץ כהה */
+    color: #ffd700;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
 }
 
 .emoji {
@@ -186,24 +204,104 @@ p,h1,h2,h3,h4 {
             color: white;
         }
 
-/* עיצוב לתמונות בדף כדי שלא יחרגו מגבולות המסך */
 .page-image {
-    max-width: 100%;
+    max-width: 35%; 
     height: auto;
-    border: 2px solid white;
+    border: 3px solid #5c0000;
     border-radius: 8px;
     display: block;
-    margin: 20px auto; /* ממורכז */
+    margin: 20px auto; 
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
 }
+
 #first-image {
-    max-width: 50%; /* אפשר לשחק עם המספר הזה, למשל 40% או 60%, עד שזה נראה מושלם */
+    max-width: 30%;
 }
+.home-content, .content-page {
+    text-align: left;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.home-content h1, .content-page h1 {
+    color: #5c0000; /* כותרות ראשיות באדום עמוק */
+    text-align: center;
+    border-bottom: 2px solid #b8860b;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.content-page h3 {
+    color: #8b4513; /* SaddleBrown לכותרות משניות */
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #b8860b;
+}
+
+.home-content p, .content-page p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.content-page strong {
+    color: #b8860b; 
+}
+
+.home-content a, .content-page a {
+    color: #00008b; /* כחול כהה לקישורים כדי שיבלטו על הקלף */
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.home-content a:hover, .content-page a:hover {
+    color: #5c0000;
+}
+
 .content-page {
     text-align: left;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     padding: 15px;
 }
+.home-content, .content-page {
+    text-align: left;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+    .home-content h1, .content-page h1 {
+        color: #5c0000; /* כותרות ראשיות באדום עמוק */
+        text-align: center;
+        border-bottom: 2px solid #b8860b;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .content-page h3 {
+        color: #8b4513; /* SaddleBrown לכותרות משניות */
+        margin-top: 25px;
+        margin-bottom: 10px;
+        border-bottom: 1px dashed #b8860b;
+    }
+
+    .home-content p, .content-page p {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .content-page strong {
+        color: #b8860b;
+    }
+
+    .home-content a, .content-page a {
+        color: #00008b; /* כחול כהה לקישורים כדי שיבלטו על הקלף */
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+        .home-content a:hover, .content-page a:hover {
+            color: #5c0000;
+        }
 
     .content-page h1 {
         color: black;
@@ -229,7 +327,7 @@ p,h1,h2,h3,h4 {
     }
 
     .content-page a {
-        color: white;
+        color: black;
         font-weight: bold;
     }
 

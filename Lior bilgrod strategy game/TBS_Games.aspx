@@ -8,6 +8,9 @@
     
     <p>If RTS is a test of speed and multitasking, Turn-Based Strategy (TBS) is a test of pure intellect and foresight. In these games, the action pauses while you make your decisions. You have all the time in the world to analyze the map, weigh your options, and execute the perfect master plan. Once your turn ends, you watch the consequences unfold as your opponents make their moves.</p>
     
+    <h3>The Battlefield: Squares vs. Hexagons</h3>
+    <p>In TBS games, the map is your chessboard, and how it's divided changes everything. Older games often used square grids, which made diagonal movement tricky to balance. Modern games largely shifted to hexagonal grids (hexes). Hexagons offer more natural movement and tactical flanking options, making positioning your units a critical puzzle to solve before you even strike.</p>
+
     <h3>Is this genre for you?</h3>
     <p>If you love the deep, analytical thinking of chess but crave modern graphics, diverse units, and complex mechanics like diplomacy and economy, TBS is your ideal playground. It's perfect for players who want to relax with a cup of coffee while conquering the world, without the stress of a ticking clock.</p>
     
@@ -22,6 +25,11 @@
     <p>Taking a completely different approach, <em>XCOM 2</em> puts you in command of a small guerrilla force fighting back against an alien occupation. It's a masterpiece of tactical TBS, where you position individual soldiers behind cover, calculate hit percentages, and grow attached to your customized squad members.</p>
     
     <img src="images/XCOM.jpg" alt="XCOM 2 tactical squad combat" class="page-image" />
+
+    <h4>3. Heroes of Might and Magic III</h4>
+    <p>A true legend that defined fantasy TBS. In <em>HoMM3</em>, you recruit mythical creatures like dragons, vampires, and griffins, explore a magical map filled with treasures, and engage in deeply tactical grid-based battles. Even decades after its release, it remains a beloved masterpiece with a massively active community.</p>
+    
+    <img src="images/homm3.jpg" alt="Heroes of Might and Magic III tactical combat" class="page-image" />
     
     <h3>Dive Deeper</h3>
     <p>Many of the biggest TBS games fall into a brilliant subgenre known as "4X" (Explore, Expand, Exploit, Exterminate). <a href="https://en.wikipedia.org/wiki/4X" target="_blank">Read more about the fascinating mechanics of 4X strategy games</a>.</p>

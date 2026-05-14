@@ -16,6 +16,9 @@
     
     <h3>The Best of Both Worlds: The Hybrid Approach</h3>
     <p>What if you want the deep, slow-paced planning of a TBS, but the thrilling, cinematic battles of an RTS? That's where hybrid games shine! The <em>Total War</em> series is the ultimate example. You spend your turns managing your empire's economy, diplomacy, and moving armies on a massive global map. But when two armies meet, the game zooms in, and you personally command thousands of individual soldiers in glorious, real-time tactical combat.</p>
+
+    <h3>The Spin-Offs: MOBA and Tower Defense</h3>
+    <p>Strategy games are so influential that they actually birthed completely new genres! <strong>MOBA (Multiplayer Online Battle Arena)</strong> started as a simple fan-made mod for a strategy game, and exploded into massive team-based esports. Instead of controlling an entire army, you control a single powerful hero alongside your teammates. Then there's <strong>Tower Defense (TD)</strong>, where the strategy shifts to survival. You must build and upgrade stationary defenses to stop endless waves of enemies from reaching your base. It's highly addictive and tests your spatial planning.</p>
     
     <h3>Scale: From Small Squads to Entire Empires</h3>
     <p>Another huge factor is the scale of the game. Do you want to know every soldier in your squad by name and customize their gear? Tactical games are the way to go. Do you want to rule an entire civilization, dealing with global trade, research, and history-spanning wars? Then Grand Strategy is calling your name. <a href="https://en.wikipedia.org/wiki/Grand_strategy_wargame" target="_blank">Discover more about the fascinating world of Grand Strategy games</a>.</p>
